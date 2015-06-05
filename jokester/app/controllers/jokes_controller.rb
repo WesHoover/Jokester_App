@@ -1,4 +1,4 @@
-Class JokesController < ApplicationController
+class JokesController < ApplicationController
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
 	def index
 		@jokes = Joke.all
@@ -67,5 +67,4 @@ Class JokesController < ApplicationController
     def joke_params
       params.require(:joke).permit(:joke_post, :user_id)
     end
-end
 end
