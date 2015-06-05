@@ -1,1 +1,26 @@
-index.html.erb
+<nav>
+  <ul>
+      <li><a href="#">Jokes</a></li>
+      <li><a href="#">My Yolks</a></li>
+      <li><a href="#">Log out</a></li>
+  </ul>
+</nav>
+
+
+<!-- ALL JOKES -->
+<div>
+  <p>RANDOM JOKES:</p>
+  <% @jokes.each do |joke| %>
+    <%= joke.joke_posts %>
+  <% end %>
+
+
+</div>
+
+<!-- TOP JOKES -->
+<div>
+    <p>TOP JOKES:</p>
+    <% @jokes.each do |joke| %>
+    <%= joke.joke_posts %>
+  <% end %>    
+</div>
