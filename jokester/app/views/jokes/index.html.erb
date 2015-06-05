@@ -7,7 +7,10 @@
 
 <!-- ALL JOKES -->
 <div>
-  <ul>
-      <%= %>
-  </ul>    
+  RANDOM JOKES:
+  <% @jokes.sample do |joke| %>
+    <%= joke.joke_posts %>
+  <% end %>
+
+
 </div>
