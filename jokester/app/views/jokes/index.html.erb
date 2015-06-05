@@ -7,9 +7,9 @@
 
 <!-- ALL JOKES -->
 <div>
-  RANDOM JOKES:
-  <% @jokes.sample do |joke| %>
-    <%= joke.joke_posts %>
+  <h1>RANDOM JOKES:</h1>
+  <% @jokes.each do |joke| %>
+    <%= joke.joke_posts %><br>
   <% end %>
 
 

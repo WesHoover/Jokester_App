@@ -12,11 +12,13 @@ class JokesController < ApplicationController
 	# Displays form for creating a new joke
 	def new
 		@joke = Joke.new
+		@joke.save
 	end
 
 	# Processes data from the new joke form and creates a joke
 	def create
 	    @joke = Joke.new(joke_params)
+	    @joke.save
 
 	    respond_to do |format|
 	      if @joke.save
@@ -65,6 +67,6 @@ class JokesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def joke_params
-      params.require(:joke).permit(:joke_post, :user_id)
+      params.require(:joke).permit(:joke_posts, :user_id)
     end
 end
